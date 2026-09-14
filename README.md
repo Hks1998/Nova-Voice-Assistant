@@ -8,11 +8,13 @@ NOVA can understand text and voice commands, open applications and websites, con
 
 1. Open the NOVA project folder
 
-Open PowerShell and run:
+Open PowerShell and navigate to the folder where you downloaded or cloned NOVA.
 
-cd "C:\Users\harsh\OneDrive\Desktop\NOVA_Agentic_Desktop_Assistant_Beautified\NOVA_Agent_Beautified"
+cd "path\to\NOVA_Agent_Beautified"
 
-If your NOVA folder is somewhere else, change the path accordingly.
+Replace path\to\NOVA_Agent_Beautified with your actual project location.
+
+Easier method: Open the NOVA folder in File Explorer, click the address bar, type powershell, and press Enter. PowerShell will open directly in the correct folder.
 
 2. Create a virtual environment
 
@@ -22,18 +24,12 @@ Activate it:
 
 .\.venv\Scripts\activate
 
-When it is active, you should see something similar to:
-
-(.venv) PS C:\...>
-
 3. Install the required packages
-
-First install the project's packages:
 
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 
-Then install the packages used for the camera and Windows controls:
+Install the additional packages for the camera and Windows controls:
 
 pip install opencv-python pillow screen-brightness-control pycaw comtypes
 
@@ -51,23 +47,19 @@ GROQ_API_KEY=your_groq_api_key_here
 
 Replace your_groq_api_key_here with your actual Groq API key.
 
-⚠️ Keep your API key private. Never upload your .env file to GitHub or share it publicly.
+⚠️ Keep your API key private. Never upload your .env file to GitHub.
 
 5. Start NOVA
 
-With the virtual environment activated:
-
 python main.py
-
-NOVA should now open.
 
 🎮 Using NOVA
 
 💬 Text Commands
 
-Type your command in the message box and click Send.
+Type a command in the message box and click Send.
 
-Try:
+Examples:
 
 open calculator
 open VS Code
@@ -81,7 +73,7 @@ start stopwatch
 stop stopwatch
 today's news
 
-You can use normal conversational language. You do not need to follow a special command format.
+NOVA accepts normal conversational language.
 
 🎤 Voice Commands
 
@@ -89,7 +81,7 @@ Click the 🎤 microphone button.
 
 Speak your command clearly.
 
-NOVA will process it and respond.
+NOVA will process and respond.
 
 Examples:
 
@@ -123,13 +115,9 @@ Close Camera
 
 Closes the camera
 
-Photos and videos are saved in the NOVA camera folders created by the application.
-
-Make sure your webcam is connected and that Windows has given Python permission to access it.
+Make sure your webcam is connected and Windows allows Python to access it.
 
 ⏱️ Timer & Stopwatch
-
-NOVA supports both timers and a stopwatch.
 
 Timer
 
@@ -143,11 +131,9 @@ start stopwatch
 stop stopwatch
 reset stopwatch
 
-The current timer and stopwatch values are displayed in the TIME TOOLS section of the NOVA interface.
+The current values are shown in the TIME TOOLS section.
 
 🔊 Volume & 💡 Brightness
-
-NOVA can control supported Windows system settings.
 
 Volume
 
@@ -163,11 +149,9 @@ increase brightness
 decrease brightness
 set brightness to 70 percent
 
-Brightness control depends on Windows and your display hardware. Some external monitors do not allow software brightness control.
+Brightness control depends on Windows and your display hardware. Some external monitors do not support software brightness control.
 
 🖥️ Applications & Websites
-
-NOVA can launch supported applications and websites.
 
 Examples:
 
@@ -182,7 +166,7 @@ open YouTube
 
 🛑 Stopping NOVA
 
-To close NOVA, simply close the main NOVA window.
+Close the main NOVA window to exit.
 
 To stop voice output while NOVA is speaking, use:
 
@@ -190,17 +174,21 @@ Stop Voice
 
 🔁 Starting NOVA Again
 
-Whenever you open a new PowerShell window, activate the virtual environment first:
+Whenever you open a new PowerShell window, navigate to the project folder and activate the environment:
 
-cd "C:\Users\harsh\OneDrive\Desktop\NOVA_Agentic_Desktop_Assistant_Beautified\NOVA_Agent_Beautified"
+cd "path\to\NOVA_Agent_Beautified"
 .\.venv\Scripts\activate
 python main.py
 
-✅ Quick Start
+Replace path\to\NOVA_Agent_Beautified with the location of your project.
 
-For normal day-to-day use, these are the only commands you usually need:
+Easy alternative: Open the NOVA folder in File Explorer, type powershell in the address bar, press Enter, then run:
 
-cd "C:\Users\harsh\OneDrive\Desktop\NOVA_Agentic_Desktop_Assistant_Beautified\NOVA_Agent_Beautified"
+.\.venv\Scripts\activate
+python main.py
+
+✅ Quick Start After Installation
+
 .\.venv\Scripts\activate
 python main.py
 
